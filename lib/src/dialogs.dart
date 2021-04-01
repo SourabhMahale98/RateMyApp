@@ -98,11 +98,11 @@ class RateMyAppDialog extends StatelessWidget {
   }
 
   List<Widget> _defaultActionsBuilder(BuildContext context) => [
-        RateMyAppRateButton(
+        RateMyAppNoButton(
           rateMyApp,
-          text: rateButton,
+          text: noButton,
           validator: () =>
-              listener == null || listener!(RateMyAppDialogButton.rate),
+              listener == null || listener!(RateMyAppDialogButton.no),
         ),
         RateMyAppLaterButton(
           rateMyApp,
@@ -110,11 +110,11 @@ class RateMyAppDialog extends StatelessWidget {
           validator: () =>
               listener == null || listener!(RateMyAppDialogButton.later),
         ),
-        RateMyAppNoButton(
+        RateMyAppRateButton(
           rateMyApp,
-          text: noButton,
+          text: rateButton,
           validator: () =>
-              listener == null || listener!(RateMyAppDialogButton.no),
+              listener == null || listener!(RateMyAppDialogButton.rate),
         ),
       ];
 }
